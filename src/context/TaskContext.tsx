@@ -28,7 +28,7 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
             try {
                 const response = await axios.get(API_URL);
                 setBranches(response.data.branches);
-                setTasks(response.data.tasks.slice(0, 1000));
+                setTasks(response.data.tasks.slice(0, 10000));
                 setAllTasks(response.data.tasks); // Сохраняем весь массив
             } catch (error) {
                 console.error('Ошибка загрузки данных:', error);

@@ -28,6 +28,7 @@ const TaskTree: React.FC = () => {
         setPage(prev => prev + 1);
     }, []);
 
+
     const buildTree = (tasks: Task[]) => {
         const taskMap = new Map<number, any>();
         tasks.forEach(task => taskMap.set(task.id, { id: String(task.id), name: `Task ${task.id} (${task.date})`, children: [] }));
@@ -41,6 +42,7 @@ const TaskTree: React.FC = () => {
         return Array.from(taskMap.values()).filter(task => !tasks.some(t => t.id === task.prev));
     };
 
+    console.log(visibleTasks.length < tasks.length)
     return (
         <div className="task-tree-container">
             <h2>Branches</h2>
@@ -52,9 +54,12 @@ const TaskTree: React.FC = () => {
                     dataLength={visibleTasks.length}
                     next={fetchMoreData}
                     hasMore={visibleTasks.length < tasks.length}
-                    loader={<></>}
+                    scrollableTarget="scroll-container"
+                    loader={<h4>Загрузка...</h4>}
                 >
-                    <TreeView data={buildTree(visibleTasks)} />
+                    <div id="scroll-container" style={{height: "500px", overflowY: "auto"}}>
+                        <TreeView data={buildTree(visibleTasks)}/>
+                    </div>
                 </InfiniteScroll>
             )}
         </div>
