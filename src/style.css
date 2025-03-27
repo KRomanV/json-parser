@@ -1,0 +1,99 @@
+/* style.css */
+
+/* Контейнер TaskTree */
+.task-tree-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+.task-tree-container h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Контейнер для InfiniteScroll */
+.task-list {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* Лоадер */
+.loader {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Стили для BranchList */
+.branch-list {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.branch-item {
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #e0e0e0;
+    transition: background 0.2s;
+}
+
+.branch-item:hover {
+    background: #007bff;
+    color: white;
+}
+
+.branch-item.active {
+    background: #0056b3;
+    color: white;
+}
+
+
+/* Стили для задач в TreeView */
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    background: #ffffff;
+    transition: background 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.task-item:hover {
+    background: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-item .task-id {
+    font-weight: bold;
+    color: #333;
+}
+
+.task-item .task-date {
+    font-size: 12px;
+    color: #777;
+}
+
+.task-item .task-branch {
+    font-size: 12px;
+    font-weight: bold;
+    color: #007bff;
+}
