@@ -32,6 +32,9 @@ Json-parser — это веб-приложение для просмотра з�
 Используется API `https://rdb.altlinux.org/api/site/tasks_history` для получения списка задач и веток.
 
 
+## ![image](https://github.com/user-attachments/assets/2b47cc92-da44-41f5-80f0-7fee86bbd98b)
+https://KRomanV.github.io/json-parser
+
 ## 📝 TODO
 - [ ] Доработка поиска
 
