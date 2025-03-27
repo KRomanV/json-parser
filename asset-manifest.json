@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/json-parser/static/css/main.b41af3b2.css",
+    "main.js": "/json-parser/static/js/main.e00f5fe9.js",
+    "index.html": "/json-parser/index.html",
+    "main.b41af3b2.css.map": "/json-parser/static/css/main.b41af3b2.css.map",
+    "main.e00f5fe9.js.map": "/json-parser/static/js/main.e00f5fe9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b41af3b2.css",
+    "static/js/main.e00f5fe9.js"
+  ]
+}
